@@ -9,7 +9,7 @@ namespace CeloPracticalChallenge
         private List<String> _lastNames = new List<String>() { "James", "Norris", "McDonald", "Erickson", "Lee", "Retter", "Calder", "Poland", "Flynn", "Hunter", "Black", "Gray", "Musk", "Schgo" };
         private List<String> _titles = new List<String>() { "Ms", "Mrs", "Mr", "Miss", "Dr" };
 
-        public User CreateRandomUser()
+        public User CreateRandomUser(int index)
         {
             var rnd = new Random();
 
@@ -19,6 +19,7 @@ namespace CeloPracticalChallenge
 
             return new User
             {
+                Id = index,
                 Title = title,
                 FirstName = fName,
                 LastName = lName,
